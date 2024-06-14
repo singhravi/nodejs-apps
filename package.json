@@ -1,0 +1,29 @@
+{
+  "name": "weather-based-planning",
+  "version": "1.0.0",
+  "description": "Plan your travel based on weather condition and forecast",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/singhravi/weather-based-planning.git"
+  },
+  "keywords": [
+    "Nodejs"
+  ],
+  "author": "Ravi Shankar Singh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/singhravi/weather-based-planning/issues"
+  },
+  "homepage": "https://github.com/singhravi/weather-based-planning#readme",
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.3"
+  }
+}
