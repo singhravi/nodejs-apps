@@ -1,0 +1,17 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "Use Google Geolocation API. It takes an address and returns the latitude and longitude coordinates, and this is going to be great for the weather app. This is because the weather API we use requires those coordinates and it returns real- time weather data, such as the temperature, five-day forecast, wind speed, humidity, and other pieces of weather information.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "request": "^2.88.2",
+    "yargs": "^17.7.2"
+  }
+}
