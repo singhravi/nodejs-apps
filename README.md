@@ -1,16 +1,13 @@
-echo "# weather-based-planning-" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/singhravi/weather-based-planning-.git
-git push -u origin main
+# Nodejs Architecture
+
+![Nodejs Architecture](./images/nodejs-architecture.png)
+
+Nodejs architecture is built on top of V8 Engine of Chrome with an extension of Node API which process I/O intensive job using non-block queue and event loop which keep on listening for the result as callback to be retruned as result into the call stack of V8 Engine, which is single threaded.
 
 # Download Nodejs LTS and install
 
 [Check for LTS Life](https:/​/​github.​com/​nodejs/​LTS)
 [Nodejs Installer](https:/​/​nodejs.​org/​en/​)
-Select V8 Engine for Chrome.
 
 # Verify installation
 
