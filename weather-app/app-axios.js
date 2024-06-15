@@ -9,6 +9,7 @@ const argv = yargs
     a: {
       demand: true,
       alias: "address",
+      default: "Gurugram, HR, India",
       describe: "Address to fetch weather information",
       string: true,
     },
@@ -16,7 +17,7 @@ const argv = yargs
   .help()
   .alias("help", "h")
   .alias("version", "v").argv;
-//TODO - default location, in case user does not pass the address from command line
+
 const address = argv.address;
 
 let WEATHER_API_URL = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${address}?key=${API_KEY}`;
