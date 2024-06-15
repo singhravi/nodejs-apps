@@ -6,6 +6,8 @@ Using yargs npm package, we will read data from the terminal as input for the lo
 
 # How to use the application
 
+It is mandatory to have the API KEy from the Visual Crossing, else the application for weather will not work.
+In the .env file, create a key called, VC_API_KEY and set its value to your generated API key.
 I have defined .env file and stored inside all the required environment variables like API KEYs and values
 
 ` node app.js --address 'your address'`
