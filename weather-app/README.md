@@ -38,3 +38,21 @@ https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timel
 # JSON Data display in Chrome browser
 
 JSONView plugin
+
+# Promises in async method calls
+
+Promises aim to solve a lot of the problems that come up when we have a lot of asynchronous code or I/O intensive code in our application. They make it a lot easier to manage our asynchronous computations—things such as requesting data from a database. Alternatively, in the case of a weather app, things such as fetching data from a URL.
+
+- <b></i>Promise is used to avoid lots of check with if/else in callback functions.</i></b>
+- <b><i>Inside Promise we can either resolve/success or reject/failure</i></b>
+- Accidental call of callback twice can be avoided using Promise
+- Promise has two states: either <b>pending (awaiting for response) or settled - when fulfilled or rejected</b>
+
+# Promise Chaining
+
+Promise chaining is the idea of having multiple promises run in a sequence. In order to chain our promises, inside our success call we'll return a new promise.
+
+# Axios
+
+It is in-built Promise return, so we need to use only then() for success and catch() for error.
+[Axios](https://www.npmjs.com/package/axios) - refer for more detail information.

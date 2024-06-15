@@ -16,10 +16,19 @@ const argv = yargs
   .alias("help", "h")
   .alias("version", "v").argv;
 
-weather.getWeather(argv.address, (errorMessage, results) => {
-  if (errorMessage) {
+// weather.getWeather(argv.address, (errorMessage, results) => {
+//   if (errorMessage) {
+//     console.log(errorMessage);
+//   } else {
+//     console.log(JSON.stringify(results, undefined, 2));
+//   }
+// });
+
+weather.getWeatherPromise(argv.address).then(
+  (res) => {
+    console.log(res);
+  },
+  (errorMessage) => {
     console.log(errorMessage);
-  } else {
-    console.log(JSON.stringify(results, undefined, 2));
   }
-});
+);

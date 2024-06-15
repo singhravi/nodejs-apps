@@ -36,6 +36,40 @@ let getWeather = (address, callback) => {
   );
 };
 
+let getWeatherPromise = (address) => {
+  //using Promise instead of callback
+  return new Promise((resolve, reject) => {
+    request(
+      {
+        url: `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${address}?key=${API_KEY}`,
+        json: true,
+      },
+      (error, response, body) => {
+        if (error) {
+          reject("unable to connect to server");
+        } else if (response.statusCode === 404) {
+          reject("No data found");
+        } else if (response.statusCode === 200) {
+          //there is no error now but only result, so first argument is undefined
+          resolve({
+            Address: body.address,
+            Latitude: body.latitude,
+            Longitude: body.longitude,
+            TimeZone: body.timezone,
+            TZOffset: body.tzoffset,
+            Description: body.description,
+            Temperature: body.currentConditions.temp,
+            FeelsLike: body.currentConditions.feelslike,
+            Time: body.currentConditions.datetime,
+            //   Days: [body.days],
+          });
+        }
+      }
+    );
+  });
+};
+
 module.exports = {
   getWeather,
+  getWeatherPromise,
 };
