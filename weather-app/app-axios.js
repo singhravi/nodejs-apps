@@ -30,11 +30,28 @@ axios
     let temperature = response.data.currentConditions.temp;
     let feelsLikeTemperature = response.data.currentConditions.feelslike;
     let readingTime = response.data.currentConditions.datetime;
+    let humidity = response.data.currentConditions.humidity;
+    let precipitation = response.data.currentConditions.precip;
+    let precipitationProbability = response.data.currentConditions.precipprob;
+    let snow = response.data.currentConditions.snow;
+    let snowdepth = response.data.currentConditions.snowdepth;
+    let windspeed = response.data.currentConditions.windspeed;
+    let visibility = response.data.currentConditions.visibility;
+    let sunrise = response.data.currentConditions.sunrise;
+    let sunset = response.data.currentConditions.sunrise;
 
     console.log(`
+        Current Condition today at: ${readingTime} 
         Temperature: ${temperature},    
         FeelsLike: ${feelsLikeTemperature},
-        Time: ${readingTime}`);
+        Humidity: ${humidity},
+        Precipitation: ${precipitation},
+        Snow: ${snow},
+        Snow Depth: ${snowdepth},
+        Wind Speed: ${windspeed},
+        Visibility: ${visibility},
+        Sun Rise: ${sunrise},
+        Sun Set: ${sunset}`);
   })
   .catch((error) => {
     //use error.code to check the error types using if condition. error.message is the error message
