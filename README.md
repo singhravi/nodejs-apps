@@ -1,6 +1,6 @@
 # Nodejs Architecture
 
-![Nodejs Architecture](./images/nodejs-architecture.png)
+![Nodejs Architecture](./images/nodejs-architecture.png "Nodejs Architecture")
 
 Nodejs architecture is built on top of V8 Engine of Chrome with an extension of Node API which process I/O intensive job using non-block queue and event loop which keep on listening for the result as callback to be retruned as result into the call stack of V8 Engine, which is single threaded.
 
@@ -77,10 +77,10 @@ The result of the npm init command is a file, called package.json
 # Important Libraries
 
 - inbuilt process.argv to getting the name of the arguments passed
-- yargs: to get the key-value pair of the arguments
-- lodash: multiple utlities for strings and arrays
-- pm2: production runner for nodejs app
-- nodemon: development runner for nodejs app
+- [yargs](https://yargs.js.org/docs/): to get the key-value pair of the arguments
+- [lodash](https://www.npmjs.com/package/lodash): multiple utlities for strings and arrays
+- [pm2](https://www.npmjs.com/package/pm2): production runner for nodejs app. Ex: $pm2 start app.js
+- [nodemon](https://www.npmjs.com/package/nodemon): development runner for nodejs app Ex: $nodemon app.js
 - JSON.stringify(jsonObject) converts JSON object into JSON string
 - JSON.parse(jsonString) converts JSON string into JSON object
 
@@ -110,9 +110,9 @@ The result of the npm init command is a file, called package.json
 - And use the keyword debugger where you want to debug
 - And after run, use the c key to go to debugger location
 - And then use repl to go to nodejs prompt and check there what you want to check and validate.
-
-3rd party tool Chrome DevTools is one of the important visual tool for debugging nodejs application.
+- Use <b>VS Code Debugger</b> to debug the application to find the issues and solve it.
+  ![VS Code Debugger](./images/vscode-debugger.png "VS Code Debugger")
 
 # Note:
 
-()=> {} arrow function cannot use this as expected, better use ES5 function
+()=> {} arrow function cannot use this keyward as expected, better use ES5 function for this keyword functionality to work better.

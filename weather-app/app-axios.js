@@ -46,6 +46,7 @@ axios
         FeelsLike: ${feelsLikeTemperature},
         Humidity: ${humidity},
         Precipitation: ${precipitation},
+        Precipitation Probability: ${precipitationProbability}
         Snow: ${snow},
         Snow Depth: ${snowdepth},
         Wind Speed: ${windspeed},
