@@ -18,9 +18,9 @@ app.set("view engine", hbs);
 //inject maintenance page before the public directory middleware, so bring the site completely inaccessible
 //inject maintenace page after the public directory middleware, to make the static site available
 // comment below 3 lines code, once the site is updated under maintenance
-app.use((req, res, next) => {
-  res.render("maintenance.hbs");
-});
+// app.use((req, res, next) => {
+//   res.render("maintenance.hbs");
+// });
 
 app.use(express.static(__dirname + "/public"));
 //register helper to get current year
@@ -36,6 +36,7 @@ app.use((req, res, next) => {
   var now = new Date().toString();
   console.log(`${now}: ${req.method} ${req.url}`);
   next();
+  console.log("below next call");
 });
 
 //register handler using app.get, which takes two arguments - 1. url, 2. function: what to return
